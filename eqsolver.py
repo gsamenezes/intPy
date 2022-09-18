@@ -8,7 +8,7 @@ from intpy.intpy import initialize_intpy, deterministic
 
 T = 1
 C = 1
-
+F_solution = 0.5
 Kd1 = 2
 
 n2 = 1000
@@ -20,13 +20,13 @@ x_list = np.linspace(1, 2e4, n_solutions)
 F_list = np.empty_like(x_list)
 
 @deterministic
-def solve(n1, F_solution):
+def solve(n1):
     return fsolve(func=lambda x: n1 * C / (1 + Kd1 / x) + n2 * C / (1 + Kd2 / x) - T, x0=F_solution, xtol=1e-6)
 
 
 if __name__ == '__main__':
     n = int(sys.argv[1])
-    F_solution = int(sys.argv[2])
+    
     start = time.perf_counter()
     for i in range(n_solutions):
         # Redefine n1
