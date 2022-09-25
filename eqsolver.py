@@ -25,7 +25,7 @@ def solve(n, F_solution):
 def main(F_solution):
     for i in range(n_solutions):
         # Define function
-        F_solution=solve(F_solution)
+        F_solution=solve(x_list[i], F_solution)
         F_list[i]=F_solution
 
         # Print result
