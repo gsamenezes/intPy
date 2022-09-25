@@ -33,8 +33,7 @@ def main(F_solution):
 
 if __name__ == '__main__':
     F_solution = int(sys.argv[1])
-    size = int(sys.argv[2])
-    F_solution = F_solution/size
+    F_solution = F_solution/10
     start = time.perf_counter()
     main(F_solution)
     print(time.perf_counter() - start)
