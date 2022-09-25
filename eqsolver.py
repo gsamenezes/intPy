@@ -32,7 +32,9 @@ def main(F_solution):
         print('x: %20.8f \t\tF: %20.8f' % (x_list[i], F_solution))
 
 if __name__ == '__main__':
-    F_solution = float(sys.argv[1])
+    F_solution = int(sys.argv[1])
+    size = int(sys.argv[2])
+    F_solution = F_solution/size
     start = time.perf_counter()
     main(F_solution)
     print(time.perf_counter() - start)
