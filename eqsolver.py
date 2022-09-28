@@ -28,9 +28,6 @@ def main(F_solution):
         F_solution=solve(x_list[i], F_solution)
         F_list[i]=F_solution
 
-        # Print result
-        print('x: %20.8f \t\tF: %20.8f' % (x_list[i], F_solution))
-
 if __name__ == '__main__':
     F_solution = int(sys.argv[1])
     F_solution = F_solution/10
