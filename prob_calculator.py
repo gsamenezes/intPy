@@ -1,6 +1,8 @@
 import time
 from intpy.intpy import initialize_intpy, deterministic
 import sys
+import random
+import copy
 
 class Hat:
     def __init__(self, **kwargs):
@@ -71,8 +73,8 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
 
 @deterministic
 def calc_probability(n):
-    hat = prob_calculator.Hat(blue=4, red=2, green=6)
-    return prob_calculator.experiment(
+    hat = Hat(blue=4, red=2, green=6)
+    return experiment(
         hat=hat,
         expected_balls={"blue": 2,
                         "red": 1},
