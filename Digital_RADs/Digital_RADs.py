@@ -48,9 +48,7 @@ def complement(seq):
 def reverse_complement(seq):
     seq = list(seq)
     seq.reverse()
-    aspas = ''
-    return aspas.join(complement(seq))
-    #return ''.join(complement(seq))
+    return ''.join(complement(seq))
 
 print('\n********************************************************************************************\n'+
       'Digital_RADs.py\n'+
@@ -63,6 +61,7 @@ print('\n***********************************************************************
       'python3 Digital_RADs.py infile outfile 2 enzyme1_seq enzyme2_seq window_start window_end\n'+
       '\nSee Digital_RADs.readme file for more details.\n'+
       '********************************************************************************************\n')
+
 
 
 @initialize_intpy(__file__)
